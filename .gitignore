@@ -1,0 +1,8 @@
+.idea/
+.git/
+coverage/
+node_modules/
+__tests__/
+__mocks__/
+jest.json
+package-lock.json
