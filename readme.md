@@ -13,6 +13,12 @@ Tests / coverage / snapshots can be separately disabled by environment variables
 
 This project was started based on https://github.com/adalbertoteixeira/jest-bamboo-formatter
 
+# Installation
+Install and add the reporter to the development dependencies in package.json:
+```
+npm i bamboo-jest-reporter --save-dev
+```
+
 # Configuration
 ##### Configure an npm test script for your project
 Add the test npm script in your package.json

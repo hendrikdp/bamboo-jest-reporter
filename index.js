@@ -36,10 +36,10 @@ module.exports = class{
 
     getEnvs(){
         return {
-            coverage: process.env.JEST_REPORTER_ADD_COVERAGE || true,
-            snapshotAddObsolete: process.env.JEST_REPORTER_SNAPSHOTS_ADD_OBSOLETE || true,
-            test: process.env.JEST_REPORTER_ADD_TESTS || true,
-            filename: process.env.JEST_REPORTER_OUTPUT_FILE || process.env.JEST_FILE || `jest.json`
+            coverage: process.env.JEST_REPORTER_ADD_COVERAGE || process.env.bamboo_JEST_REPORTER_ADD_COVERAGE || true,
+            snapshotAddObsolete: process.env.JEST_REPORTER_SNAPSHOTS_ADD_OBSOLETE || process.env.bamboo_JEST_REPORTER_SNAPSHOTS_ADD_OBSOLETE || true,
+            test: process.env.JEST_REPORTER_ADD_TESTS || process.env.bamboo_JEST_REPORTER_ADD_TESTS || true,
+            filename: process.env.JEST_REPORTER_OUTPUT_FILE || process.env.bamboo_JEST_REPORTER_OUTPUT_FILE || process.env.JEST_FILE || process.env.bamboo_JEST_FILE || `jest.json`
         }
     }
 
