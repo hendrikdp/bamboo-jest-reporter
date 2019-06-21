@@ -34,11 +34,12 @@ https://jestjs.io/docs/en/configuration
 #### Add reporter
 Add the following line to your configuration to add this reporter:
 ```
+reporters: [ "default", "bamboo-jest-reporter" ],
+```
+If you do not need the default Jest reporter
+(the default Jest reporter prints the Jest results in the bash/cmd-client)
+```
 reporters: [ "bamboo-jest-reporter" ],
-```
-If you want to preserve the default Jest reporters:
-```
-reporters: [ "defaults", "bamboo-jest-reporter" ],
 ```
 #### Add coverage thresholds
 To add code coverage thresholds, add the following block to the configuration:
