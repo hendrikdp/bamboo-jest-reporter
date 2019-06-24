@@ -1,6 +1,6 @@
 {
   "name": "bamboo-jest-reporter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A reporter for Jest which parses the coverage-, snapshot- and test-results to a Mocha Test Parser format",
   "main": "index.js",
   "scripts": {

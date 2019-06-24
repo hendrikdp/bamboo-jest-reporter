@@ -45,7 +45,7 @@ module.exports = class{
 
     addCoverage(results){
         if(this.constructor.envToBoolean(this._envs.coverage)){
-            const coverageConfig = this.getTresholdConfig();
+            const coverageConfig = this.getThresholdConfig();
             if(results.coverageMap && coverageConfig){
                 coverage.add(results.coverageMap, coverageConfig, this._report);
             }
@@ -64,7 +64,7 @@ module.exports = class{
         }
     }
 
-    getTresholdConfig(){
+    getThresholdConfig(){
         return this._globalConfig && this._globalConfig.coverageThreshold && this._globalConfig.coverageThreshold.global;
     }
 
