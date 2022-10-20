@@ -6,6 +6,15 @@ function add(results, report){
 }
 
 function addTestSuiteResult(testSuite, report){
+    if (testSuite.failureMessage) {
+        report.failed.push({
+          title: testSuite.testFilePath,
+          fullTitle: testSuite.testFilePath,
+          duration: 0,
+          errorCount: 1,
+          error: testSuite.failureMessage,
+        });
+    }
     //iterate tests
     for(let test of testSuite.testResults){
         const collection = report[test.status];
